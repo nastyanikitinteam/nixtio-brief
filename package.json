@@ -21,6 +21,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/mailgun-js": "^0.22.18",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.16",
     "@types/react": "^18",

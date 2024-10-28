@@ -9,7 +9,7 @@ import styles from "./brief-form.module.scss";
 const Basic = () => {
   const handleSubmit = async (values: any) => {
     const pdfContent = generatePDF(values); // Генерація PDF
-    const base64PDF = btoa(pdfContent); // Перетворення PDF на base64
+    // const base64PDF = btoa(pdfContent); // Перетворення PDF на base64
 
     // Надсилаємо запит на сервер
     const response = await fetch("/api/sendEmail", {
