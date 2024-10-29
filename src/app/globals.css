@@ -1,14 +1,21 @@
+@import url("../../public/fonts/stylesheet.css");
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --black: #000000;
+  --black_second: #1d1e1f;
+  --gray: #696f77;
+  --border_gray: #979ca3;
+  --base_font: "Epilogue", sans-serif;
+  --red: #dc414c;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -17,9 +24,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--black);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--base_font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,15 +42,21 @@ a {
   text-decoration: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 500000s ease-in-out 0s;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
 
-
 .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }

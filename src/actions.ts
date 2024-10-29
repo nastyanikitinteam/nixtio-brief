@@ -15,8 +15,6 @@ export const sendEmail = async (prevState: State, formData: BriefFormProps) => {
 
     const html = await render(EmailTemplate({ email }));
 
-    console.log(pdf, "pdf 123123");
-
     const res = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "kibkalo.work@gmail.com",
@@ -29,8 +27,6 @@ export const sendEmail = async (prevState: State, formData: BriefFormProps) => {
         },
       ],
     });
-
-    console.log(res, "res");
 
     return {
       error: null,

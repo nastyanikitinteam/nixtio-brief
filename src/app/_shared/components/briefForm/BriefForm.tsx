@@ -1,11 +1,16 @@
 "use client";
-import { Formik } from "formik";
+import { useEffect, useActionState } from "react";
+import { Formik, Form, Field } from "formik";
+import jsPDF from "jspdf";
+
 import { initialBriefFormValues } from "@/config/form";
 import type { BriefFormProps } from "@/types/form";
 import { validationOrder } from "@/shemas/form";
-import jsPDF from "jspdf";
-import { useEffect, useActionState } from "react";
 import { sendEmail } from "@/actions";
+
+import FormInput from "@components/formElements/formInput/FormInput";
+import FormPhoneInput from "@components/formElements/formInput/FormPhoneInput";
+import FormTextarea from "@components/formElements/formTextarea/FormTextarea";
 
 import styles from "./brief-form.module.scss";
 
@@ -45,20 +50,14 @@ const Basic = () => {
   };
 
   return (
-    <div>
-      <h1>Anywhere in your app!</h1>
+    <div className={styles.container}>
       <Formik initialValues={initialBriefFormValues} validationSchema={validationOrder} onSubmit={handleSubmit}>
-        {({ errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
+        {({ handleSubmit, isSubmitting }) => (
           <form onSubmit={handleSubmit} className={styles.form}>
-            <input type="text" name="fullName" placeholder="Full Name" onChange={handleChange} onBlur={handleBlur} />
-            <input type="text" name="phoneNumber" placeholder="Phone Number" onChange={handleChange} onBlur={handleBlur} />
-            <input type="text" name="email" placeholder="Email" onChange={handleChange} onBlur={handleBlur} />
-            <textarea name="message" placeholder="Message" onChange={handleChange} onBlur={handleBlur} />
-
-            {errors.fullName && touched.fullName && <div>{errors.fullName}</div>}
-            {errors.phoneNumber && touched.phoneNumber && <div>{errors.phoneNumber}</div>}
-            {errors.email && touched.email && <div>{errors.email}</div>}
-            {errors.message && touched.message && <div>{errors.message}</div>}
+            <Field type="text" name="fullName" placeholder="Full Name" component={FormInput} />
+            <Field type="text" name="phoneNumber" placeholder="Phone Number" component={FormPhoneInput} />
+            <Field type="email" name="email" placeholder="Email" component={FormInput} />
+            <Field type="text" name="message" placeholder="Message" component={FormTextarea} />
 
             <button type="submit" disabled={isSubmitting}>
               Submit

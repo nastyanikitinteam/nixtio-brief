@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border_gray);
+  font-family: var(--base_font);
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 35px;
+  color: var(--black);
+  padding: 9px 0 14px;
+  outline: none;
+  &::placeholder {
+    color: var(--gray);
+  }
+  @media (hover: hover) {
+    &:hover {
+      border-color: var(--black);
+    }
+  }
+  &:focus {
+    border-color: var(--black);
+  }
+  &.error {
+    border-color: var(--red);
+  }
+}
+
+.errortext {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  padding-top: 10px;
+}
+
+.filled {
+  background: var(--brown-light);
+}

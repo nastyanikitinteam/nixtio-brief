@@ -11,17 +11,20 @@
   "dependencies": {
     "@react-email/components": "^0.0.25",
     "@react-email/render": "^1.0.1",
+    "@svgr/webpack": "^8.1.0",
+    "classnames": "^2.5.1",
+    "css-loader": "^7.1.2",
     "dotenv": "^16.4.5",
     "formik": "^2.4.6",
     "jspdf": "^2.5.2",
-    "mailgun-js": "^0.22.0",
     "next": "15.0.1",
-    "nodemailer": "^6.9.15",
+    "postcss-loader": "^8.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-email": "^3.0.1",
     "resend": "^4.0.0",
     "sass": "^1.80.4",
+    "sass-loader": "^16.0.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {
