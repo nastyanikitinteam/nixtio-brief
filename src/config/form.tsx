@@ -5,4 +5,5 @@ export const initialBriefFormValues: BriefFormProps = {
   phoneNumber: "",
   email: "",
   message: "",
+  pdf: "",
 };

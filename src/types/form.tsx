@@ -3,4 +3,5 @@ export type BriefFormProps = {
   phoneNumber: string;
   email: string;
   message: string;
+  pdf: string;
 };

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 
 import BriefForm from "@components/briefForm/BriefForm";
@@ -10,7 +9,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className="wrapper">
             <h1>Next.js</h1>
-            <BriefForm/>
+            <BriefForm />
           </div>
         </section>
       </main>

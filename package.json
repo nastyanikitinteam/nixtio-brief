@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/components": "^0.0.25",
+    "@react-email/render": "^1.0.1",
     "dotenv": "^16.4.5",
     "formik": "^2.4.6",
     "jspdf": "^2.5.2",
@@ -17,6 +19,8 @@
     "nodemailer": "^6.9.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-email": "^3.0.1",
+    "resend": "^4.0.0",
     "sass": "^1.80.4",
     "yup": "^1.4.0"
   },
