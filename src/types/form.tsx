@@ -26,3 +26,16 @@ export type TextareaProps = {
   placeholder: string;
   rows?: number;
 };
+
+export type RadioProps = {
+  field: any;
+  form: any;
+  withIcon?: boolean;
+  children?: React.ReactNode;
+};
+
+export type CheckboxProps = {
+  field: any;
+  form: any;
+  children?: React.ReactNode;
+};

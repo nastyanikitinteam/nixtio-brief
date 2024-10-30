@@ -1,11 +1,12 @@
 @import url("../../public/fonts/stylesheet.css");
 
 :root {
-  --background: #ffffff;
+  --white: #ffffff;
   --black: #000000;
   --black_second: #1d1e1f;
   --gray: #696f77;
   --border_gray: #979ca3;
+  --back_gray: #f2f2f2;
   --base_font: "Epilogue", sans-serif;
   --red: #dc414c;
 }
@@ -25,10 +26,13 @@ body {
 
 body {
   color: var(--black);
-  background: var(--background);
+  background: var(--white);
   font-family: var(--base_font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 35px;
 }
 
 * {
@@ -59,4 +63,63 @@ input:-webkit-autofill:active {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.title-h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+  text-transform: capitalize;
+}
+
+.title-h2 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  text-transform: capitalize;
+}
+
+.title-h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.title-h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.tag {
+  color: var(--border_gray);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  display: flex;
+  transform: rotate(4deg);
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  background: var(--back_gray);
+  width: max-content;
+}
+
+.default-button {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--gray);
+  padding: 15px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: var(--base_font);
+  transition: background 0.25s ease-in, color 0.25s ease-in;
+  &:hover {
+    background: var(--black);
+    color: var(--white);
+  }
 }

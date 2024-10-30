@@ -1,17 +1,12 @@
 import styles from "./page.module.scss";
 
-import BriefForm from "@components/briefForm/BriefForm";
+import Brief from "@components/brief/Brief";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main>
-        <section className={styles.section}>
-          <div className="wrapper">
-            <h1>Next.js</h1>
-            <BriefForm />
-          </div>
-        </section>
+        <Brief />
       </main>
     </div>
   );
