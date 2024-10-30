@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Field } from "formik";
 import cn from "classnames";
 
@@ -5,6 +6,7 @@ import FormInput from "@components/formElements/formInput/FormInput";
 import FormRadio from "@/app/_shared/components/formElements/formRadio/FormRadio";
 import FormCheckbox from "@/app/_shared/components/formElements/formCheckbox/FormCheckbox";
 import FormTextarea from "../../formElements/formTextarea/FormTextarea";
+import FormRangeSlider from "@/app/_shared/components/formElements/formRangeSlider/FormRangeSlider";
 
 import ImageNewWebsite from "@images/main/img-New-website.svg";
 import ImageRedisign from "@images/main/img-Website-redesign.svg";
@@ -12,6 +14,8 @@ import ImageRedisign from "@images/main/img-Website-redesign.svg";
 import styles from "../brief-form.module.scss";
 
 const ProductDetails = () => {
+  const [audienceAge, setAudienceAge] = useState<[number, number]>([18, 50]);
+
   return (
     <div className={styles.container}>
       <div className={styles.info}>
@@ -70,6 +74,8 @@ const ProductDetails = () => {
           <div className={styles.group_item}>
             <Field type="text" name="target-audience" placeholder="Briefly describe the target audience (optional)" component={FormTextarea} />
           </div>
+
+          <FormRangeSlider min={0} max={70} step={1} value={audienceAge} onChange={(value) => setAudienceAge(value)} label="Age" />
         </div>
       </div>
     </div>

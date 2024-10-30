@@ -39,3 +39,12 @@ export type CheckboxProps = {
   form: any;
   children?: React.ReactNode;
 };
+
+export type FormRangeSliderProps = {
+  min: number;
+  max: number;
+  step?: number;
+  value: [number, number];
+  onChange: (value: [number, number]) => void;
+  label: string;
+};
