@@ -8,7 +8,7 @@ import Tooltip from "@/ui/Tooltip/Tooltip";
 
 import { inputs, cards } from "../../config/components/logoDesign.config";
 
-import type { Form } from "@/app/branding/interfaces/BrandingForm";
+import type { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
 
 import styles from "./LogoDesign.module.scss";
 

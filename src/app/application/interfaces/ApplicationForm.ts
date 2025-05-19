@@ -1,4 +1,7 @@
+import { brandingFormSchema } from "@/app/branding/schemas/brandingForm.schema";
 import type { InputList } from "@/interfaces/InputList";
+
+import type { ObjectSchema, InferType } from "yup";
 
 export interface ApplicationForm {
   initialValues: {
@@ -31,5 +34,5 @@ export interface ApplicationForm {
       need_development: string;
     };
   };
-  validationSchema: null;
+  validationSchema: ObjectSchema<InferType<typeof brandingFormSchema>>;
 }

@@ -1,4 +1,4 @@
-import { Form } from "@/app/branding/interfaces/BrandingForm";
+import { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
 
 export function getTargetAudienceData(
   target_audience: Form["initialValues"]["target_audience"]

@@ -1,4 +1,4 @@
-import { Form } from "@/app/branding/interfaces/BrandingForm";
+import { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
 
 export function getCompanyDetailsData(
   company_details: Form["initialValues"]["company_details"]

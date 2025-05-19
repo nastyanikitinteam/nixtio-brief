@@ -6,7 +6,7 @@ import Input from "@/ui/Input/Input";
 import { printInputs } from "../../config/components/brandingDesign.config";
 import { renderError } from "@/lib/helpers";
 
-import type { Form } from "@/app/branding/interfaces/BrandingForm";
+import type { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
 
 import styles from "./BrandingDesign.module.scss";
 

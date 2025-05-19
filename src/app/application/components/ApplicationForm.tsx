@@ -1,10 +1,12 @@
+'use client';
 import { useState } from "react";
 
 import Form from "@/app/components/Form/Form";
 
 import { APPLICATION_LOCAL_STORAGE_KEY } from "@/const/APPLICATION_LOCAL_STORAGE_KEY";
 
-import type { Form as ApplicationForm } from "@/app/application/interfaces/ApplicationForm";
+import { applicationFormConfig as form } from "@/app/application/config/applicationForm.config";
+import type { ApplicationForm } from "@/app/application/interfaces/ApplicationForm";
 
 export default function ApplicationForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,14 +14,23 @@ export default function ApplicationForm() {
   const getUpdatedValues = (values: ApplicationForm["initialValues"]) => {
     const {} = values;
 
-    const updatedValues = {};
+    const updatedValues = { ...values,};
+
 
     return updatedValues;
   };
 
   const getBody = (updatedValues: ApplicationForm["initialValues"]) => {
-    return {};
+    return {
+      type: "branding",
+      name: updatedValues.product_details.name,
+      email: updatedValues.product_details.email,
+      company: updatedValues.product_details.product_name,
+      values: updatedValues,
+    };
   };
+
+  console.log(isLoading);
 
   return (
     <Form
@@ -29,6 +40,8 @@ export default function ApplicationForm() {
       getBody={getBody}
       setIsLoading={setIsLoading}
       isBranding={true}
-    ></Form>
+    >
+      Test
+    </Form>
   );
 }

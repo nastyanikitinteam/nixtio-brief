@@ -6,7 +6,7 @@ import Input from "@/ui/Input/Input";
 
 import { inputs } from "../../config/components/companyDetails.config";
 
-import type { Form } from "@/app/branding/interfaces/BrandingForm";
+import type { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
 
 import styles from "./CompanyDetails.module.scss";
 

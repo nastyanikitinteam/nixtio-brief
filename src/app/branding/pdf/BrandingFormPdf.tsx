@@ -18,7 +18,7 @@ import { getTargetAudienceData } from "./components/getTargetAudienceData";
 import { getLogoDesignData } from "./components/getLogoDesignData";
 import { getBrandingDesignData } from "./components/getBrandingDesignData";
 
-import type { Form } from "@/app/branding/interfaces/BrandingForm";
+import type { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
 
 Font.register({
   family: "Arial",

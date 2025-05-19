@@ -9,9 +9,10 @@ import Modal from "@/ui/Modal/Modal";
 import type { Form } from "@/interfaces/Form";
 import type { Form as ProductForm } from "@/app/product/interfaces/Form";
 import type { BrandingForm } from "@/app/branding/interfaces/BrandingForm";
+import type { ApplicationForm } from "@/app/application/interfaces/ApplicationForm";
 
 export default function Form<
-  T extends ProductForm["initialValues"] | BrandingForm["initialValues"],
+  T extends ProductForm["initialValues"] | BrandingForm["initialValues"] | ApplicationForm["initialValues"],
 >({
   form,
   LOCAL_STORAGE_KEY,

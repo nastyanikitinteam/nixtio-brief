@@ -1,4 +1,6 @@
-import { Form } from "@/app/branding/interfaces/BrandingForm";
+import { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
+
+
 
 export function getLogoDesignData(
   logo_design: Form["initialValues"]["logo_design"]

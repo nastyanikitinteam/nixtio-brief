@@ -1,10 +1,11 @@
 import type { Form as ProductForm } from "@/app/product/interfaces/Form";
 import type { BrandingForm } from "@/app/branding/interfaces/BrandingForm";
+import type { ApplicationForm } from "@/app/application/interfaces/ApplicationForm";
 
 export interface Form<
-  T extends ProductForm["initialValues"] | BrandingForm["initialValues"],
+  T extends ProductForm["initialValues"] | BrandingForm["initialValues"] | ApplicationForm["initialValues"],
 > {
-  form: ProductForm | BrandingForm;
+  form: ProductForm | BrandingForm | ApplicationForm;
   LOCAL_STORAGE_KEY: string;
   getUpdatedValues: (values: T) => T;
   getBody: (values: T) => {

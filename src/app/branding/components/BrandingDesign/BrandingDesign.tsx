@@ -19,7 +19,7 @@ import {
 import { renderError } from "@/lib/helpers";
 import { showErrorToast } from "@/lib/helpers";
 
-import type { Form } from "@/app/branding/interfaces/BrandingForm";
+import type { BrandingForm as Form } from "@/app/branding/interfaces/BrandingForm";
 
 import cn from "classnames";
 import styles from "./BrandingDesign.module.scss";
