@@ -30,7 +30,6 @@ export default function ApplicationForm() {
     };
   };
 
-  console.log(isLoading);
 
   return (
     <Form
@@ -42,6 +41,7 @@ export default function ApplicationForm() {
       isBranding={true}
     >
       Test
+      {isLoading && <div>Loading...</div>}
     </Form>
   );
 }
