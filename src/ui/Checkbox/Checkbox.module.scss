@@ -1,0 +1,62 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    .checkbox {
+      border-color: $black;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $gray;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &--lg {
+      width: 50px;
+      height: 50px;
+    }
+
+    &--sm {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--checked {
+      border-color: $black;
+      background: $black;
+    }
+
+    &--error {
+      border-color: $primary !important;
+    }
+  }
+
+  .inner-text {
+    color: $dark-gray;
+    font-size: 15px;
+    line-height: 25px;
+
+    @include btwTabletAndLaptop {
+      font-size: 17px;
+      line-height: 27px;
+    }
+
+    @include onLaptop {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}

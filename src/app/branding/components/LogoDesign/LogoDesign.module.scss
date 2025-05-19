@@ -1,0 +1,52 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.block-1,
+.block-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-1,
+.block-2 {
+  @include lgGap;
+}
+
+.block-1 {
+  textarea {
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    color: $dark-gray;
+  }
+}
+
+.block-2,
+.block-3 {
+  @include lgMarginTop;
+
+  textarea {
+    margin-top: 0;
+  }
+}
+
+.block-2 {
+  .cards-block .cards {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include smGap;
+    margin-top: 20px;
+    text-align: center;
+
+    @include btwTabletAndLaptop {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+}
+
+.tooltip-width {
+  max-width: 420px !important;
+}

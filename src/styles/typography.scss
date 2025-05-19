@@ -1,0 +1,82 @@
+@import "./mixins.scss";
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 35px;
+  line-height: 50px;
+
+  @include btwTabletAndLaptop {
+    font-size: 47px;
+    line-height: 62px;
+  }
+
+  @include onLaptop {
+    font-size: 60px;
+    line-height: 75px;
+  }
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 35px;
+
+  @include btwTabletAndLaptop {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  @include onLaptop {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+
+  @include btwTabletAndLaptop {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  @include onLaptop {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  span {
+    color: $dark-gray;
+  }
+}
+
+p {
+  font-size: 15px;
+  line-height: 30px;
+
+  @include btwTabletAndLaptop {
+    font-size: 17px;
+    line-height: 32px;
+  }
+
+  @include onLaptop {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+
+.p2 {
+  line-height: 25px;
+
+  @include btwTabletAndLaptop {
+    line-height: 27px;
+  }
+
+  @include onLaptop {
+    line-height: 30px;
+  }
+}

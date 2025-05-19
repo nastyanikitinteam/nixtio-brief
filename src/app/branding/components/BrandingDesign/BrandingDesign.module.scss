@@ -1,0 +1,93 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  @include lgGap;
+
+  .block-1 {
+    position: relative;
+
+    > :nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+
+  .block-2 {
+    .options {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+
+      .option {
+        &--checked {
+          margin-bottom: 27px;
+
+          @include btwTabletAndLaptop {
+            margin-bottom: 41px;
+          }
+
+          @include onLaptop {
+            margin-bottom: 55px;
+          }
+        }
+
+        textarea,
+        input {
+          margin-top: 20px;
+        }
+
+        .social-media {
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+          margin-top: 20px;
+
+          @media (min-width: 400px) {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      }
+    }
+
+    .block-3 {
+      position: relative;
+      @include lgMarginTop;
+
+      > :nth-child(2) {
+        margin-top: 20px;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include lgGap;
+        @include lgMarginTop;
+
+        textarea {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  margin-top: 50px;
+
+  .custom {
+    background: $primary;
+
+    p {
+      color: $white;
+    }
+
+    &::before {
+      background: $dark-primary;
+    }
+  }
+}

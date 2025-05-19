@@ -1,0 +1,63 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.input-list {
+  .input-block,
+  .multiple {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-block {
+    input {
+      margin-top: 0;
+    }
+
+    &-gap {
+      &-lg {
+        @include lgGap;
+      }
+
+      &-sm {
+        @include smGap;
+      }
+    }
+
+    .multiple {
+      @include smGap;
+    }
+
+    .input-close-group {
+      position: relative;
+
+      .input-close {
+        padding-right: 60px;
+      }
+
+      .close-icon {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+
+        svg {
+          fill: $dark-gray;
+          transition: fill 0.3s ease-in-out;
+        }
+
+        &:hover svg {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  button {
+    margin-top: 50px;
+  }
+}

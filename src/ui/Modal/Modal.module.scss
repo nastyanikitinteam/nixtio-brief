@@ -1,0 +1,125 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-inline: 30px;
+  z-index: 2;
+  background-color: rgba(18, 18, 18, 0.85);
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 390px;
+    padding-inline: 20px;
+    padding-block: 40px 60px;
+    background-color: $white;
+    text-align: center;
+
+    @include btwTabletAndLaptop {
+      max-width: 440px;
+      padding-block: 60px 80px;
+    }
+
+    @include onLaptop {
+      max-width: 490px;
+      padding-block: 80px 100px;
+    }
+
+    .animated-icon {
+      width: 130px;
+      height: 135px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+
+      @include btwTabletAndLaptop {
+        margin-top: 30px;
+      }
+
+      @include onLaptop {
+        margin-top: 40px;
+      }
+
+      &-v1 {
+        max-width: 340px;
+      }
+
+      &-v2 {
+        max-width: 380px;
+      }
+
+      .subtitle {
+        font-weight: 400;
+      }
+
+      .title {
+        white-space: pre-line;
+      }
+    }
+
+    .btns-block {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .btn {
+      max-width: 110px;
+      margin-top: 30px;
+      background: $primary;
+
+      @include btwTabletAndLaptop {
+        margin-top: 40px;
+      }
+
+      @include onLaptop {
+        margin-top: 50px;
+      }
+
+      &-v2 {
+        max-width: 120px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 35px;
+        color: $white;
+      }
+
+      &::before {
+        background: $dark-primary;
+      }
+
+      &--link {
+        background: none;
+
+        &::before {
+          background: none;
+        }
+
+        p {
+          color: $primary;
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

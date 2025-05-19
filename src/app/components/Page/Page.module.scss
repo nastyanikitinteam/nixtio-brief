@@ -1,0 +1,53 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  width: 100%;
+  max-width: 1030px;
+  padding: 100px 30px;
+  z-index: 1;
+
+  @include btwTabletAndLaptop {
+    padding-block: 150px;
+  }
+
+  @include onLaptop {
+    padding-block: 200px;
+  }
+
+  .top-block {
+    display: flex;
+    flex-direction: column;
+
+    .subtitle {
+      font-weight: 400;
+    }
+
+    .title {
+      margin-top: 20px;
+      white-space: pre-line;
+
+      @include btwTabletAndLaptop {
+        margin-top: 25px;
+      }
+
+      @include onLaptop {
+        margin-top: 30px;
+      }
+    }
+
+    .description {
+      align-self: end;
+      max-width: 570px;
+      margin-top: 25px;
+
+      @include btwTabletAndLaptop {
+        margin-top: 30px;
+      }
+
+      @include onLaptop {
+        margin-top: 35px;
+      }
+    }
+  }
+}

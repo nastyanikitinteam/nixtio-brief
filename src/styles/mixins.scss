@@ -1,0 +1,62 @@
+@import "./variables.scss";
+
+@mixin onLaptop {
+  @media (min-width: 978px) {
+    @content;
+  }
+}
+
+@mixin btwTabletAndLaptop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 580px) {
+    @content;
+  }
+}
+
+@mixin adjustProperty($property, $default, $sm, $lg) {
+  #{$property}: $default;
+
+  @include btwTabletAndLaptop {
+    #{$property}: $sm;
+  }
+
+  @include onLaptop {
+    #{$property}: $lg;
+  }
+}
+
+@mixin xlMarginTop {
+  @include adjustProperty(margin-top, 50px, 75px, 100px);
+}
+
+@mixin lgMarginTop {
+  @include adjustProperty(margin-top, 37px, 56px, 75px);
+}
+
+@mixin smMarginTop {
+  @include adjustProperty(margin-top, 25px, 37px, 50px);
+}
+
+@mixin lgGap {
+  @include adjustProperty(gap, 37px, 56px, 75px);
+}
+
+@mixin smGap {
+  @include adjustProperty(gap, 25px, 37px, 50px);
+}
+
+@mixin options {
+  display: flex;
+  align-items: baseline;
+  @include smGap;
+
+  .option {
+    width: 100%;
+    max-width: 260px;
+  }
+}

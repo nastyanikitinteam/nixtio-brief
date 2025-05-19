@@ -1,0 +1,52 @@
+import { brandingFormSchema } from "@/app/branding/schemas/brandingForm.schema";
+
+export const brandingFormConfig = {
+  initialValues: {
+    company_details: {
+      name: "",
+      email: "",
+      company_name: "",
+      product_description: "",
+      tagline_mission_statement: "",
+      company_positioning: "",
+      previous_design: "",
+    },
+    target_audience: {
+      target_audience: "",
+      customer_need: "",
+      user_journey: "",
+      product_insights: "",
+    },
+    logo_design: {
+      logo_character: "",
+      color: "",
+      logo_types: [],
+      liked_examples: [""],
+      logo_ideas: "",
+      unacceptable_things: "",
+      logo_restrictions: "",
+      logo_using: "",
+      competitors: [{ name_or_url: "", likes_dislikes: "" }],
+      logo_core_message: "",
+      company_reflection: "",
+      any_information: "",
+    },
+    branding_design: {
+      need_branding_design: "",
+      branding_options: [],
+      business_cards: "",
+      social_media_cover: "",
+      social_media: [],
+      social_media_other: "",
+      white_paper: "",
+      presentation: "",
+      pitch_deck: "",
+      write_your_option: "",
+      need_print_files: "",
+      printing_requirements: "",
+      print_shop_info: "",
+      add_requirements: "",
+    },
+  },
+  validationSchema: brandingFormSchema,
+};

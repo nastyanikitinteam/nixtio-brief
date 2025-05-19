@@ -1,0 +1,23 @@
+@import "@/styles/mixins.scss";
+
+.block-1,
+.block-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-1 {
+  @include lgGap;
+}
+
+.block-2 {
+  .options,
+  textarea {
+    margin-top: 20px;
+  }
+
+  .options {
+    position: relative;
+    @include options;
+  }
+}

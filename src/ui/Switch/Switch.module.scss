@@ -1,0 +1,51 @@
+@import "@/styles/variables.scss";
+
+.switch-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .switch {
+    position: relative;
+    width: 95px;
+    height: 50px;
+    border: 1px solid $gray;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+
+    &:hover {
+      border-color: $black;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      background: $gray;
+      transition: all 0.6s ease-in-out;
+    }
+
+    &:checked {
+      border-color: $black;
+      background: $black;
+    }
+
+    &:checked::before {
+      content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 8L17 8V10H15V8ZM13 10L15 10V12L13 12V10ZM11 14V12H13V14H11ZM9 14H11V16H9L9 14ZM9 14H7V12H9V14Z' fill='black'/%3E%3C/svg%3E%0A");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white;
+      transform: translate(104%, -50%);
+    }
+  }
+
+  .inner-text {
+    color: $dark-gray;
+  }
+}

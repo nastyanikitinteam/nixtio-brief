@@ -1,0 +1,15 @@
+@import "@/styles/mixins.scss";
+
+.block-1 {
+  display: flex;
+  flex-direction: column;
+  @include lgGap;
+
+  textarea {
+    margin-top: 20px;
+  }
+}
+
+.tooltip-width {
+  max-width: 365px !important;
+}

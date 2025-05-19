@@ -1,0 +1,75 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.toggler {
+  display: flex;
+  align-items: center;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 255px;
+    min-width: 85px;
+    height: 60px;
+    padding-block: 15px;
+    padding-inline: 20px;
+    border: 1px solid $gray;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 400px) {
+      justify-content: center;
+      padding-inline: 0;
+    }
+
+    &:hover {
+      border-color: $black;
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+    }
+
+    p {
+      color: $dark-gray;
+    }
+
+    svg {
+      @media (max-width: 420px) {
+        display: none;
+      }
+    }
+
+    &--active {
+      border-color: $black;
+      background: $black;
+
+      p {
+        color: $white;
+      }
+    }
+
+    &--error {
+      border-color: $primary !important;
+    }
+  }
+
+  .separator {
+    width: 60px;
+    height: 60px;
+    padding: 18px;
+    border: 1px solid $gray;
+    border-inline: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &--active {
+      border-color: $black;
+      background: $black;
+    }
+  }
+}

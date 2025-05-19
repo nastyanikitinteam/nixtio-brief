@@ -1,0 +1,59 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.input-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  .input {
+    width: 100%;
+    height: 59px;
+    padding-block: 9px 15px;
+    border: none;
+    border-bottom: 1px solid $gray;
+    outline: none;
+    font-size: 15px;
+    line-height: 30px;
+    transition: border-color 0.3s ease-in-out;
+
+    @include btwTabletAndLaptop {
+      font-size: 17px;
+      line-height: 32px;
+    }
+
+    @include onLaptop {
+      font-size: 20px;
+      line-height: 35px;
+    }
+
+    &:hover {
+      border-color: $black;
+    }
+
+    &::placeholder {
+      white-space: pre-line;
+    }
+
+    &--textarea {
+      max-height: 320px;
+      padding-block: 8px 14px;
+      scrollbar-width: none;
+      resize: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &--active {
+      border-color: $black;
+    }
+
+    &--error {
+      border-color: $primary !important;
+    }
+  }
+}

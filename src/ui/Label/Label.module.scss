@@ -1,0 +1,20 @@
+@import "@/styles/variables.scss";
+
+.label {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  padding: 8px 12px;
+  background: $light-gray;
+  transform: rotate(4deg);
+  flex-shrink: 0;
+
+  p {
+    position: absolute;
+    color: $gray;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    white-space: nowrap;
+  }
+}

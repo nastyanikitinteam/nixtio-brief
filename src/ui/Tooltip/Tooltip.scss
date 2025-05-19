@@ -1,0 +1,39 @@
+@import "@/styles/variables.scss";
+
+.tooltip {
+  width: calc(100vw - 60px);
+  padding: 12px 20px;
+  border-radius: 0;
+  background: $black;
+
+  p {
+    color: $white;
+    font-size: 15px;
+    line-height: 25px;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+.tooltip-icon {
+  display: inline-block;
+  height: 40px;
+  padding-inline: 10px;
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.tippy-content {
+  padding: 0;
+}
+
+.tippy-arrow {
+  color: $black;
+}

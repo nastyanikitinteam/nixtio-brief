@@ -1,0 +1,85 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 20px 35px;
+  width: 100%;
+  outline: 1px solid $gray;
+  cursor: pointer;
+  transition: outline-color 0.3s ease-in-out;
+
+  &-img {
+    gap: 35px;
+    padding-block: 45px 30px;
+  }
+
+  .checkbox,
+  p {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .img-container {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 85px;
+
+    img {
+      height: auto;
+    }
+  }
+
+  .animated-icon {
+    width: 130px;
+    height: 135px;
+    pointer-events: none;
+  }
+
+  p {
+    display: inline-flex;
+    flex-direction: column;
+    color: $dark-gray;
+  }
+
+  .add-text,
+  .subtitle,
+  .p-smaller {
+    line-height: 25px;
+  }
+
+  .subtitle,
+  .p-smaller {
+    font-size: 15px;
+  }
+
+  &:hover,
+  &--checked {
+    outline-color: $black;
+
+    p {
+      color: $black;
+    }
+  }
+
+  &--checked {
+    .checkbox {
+      opacity: 1;
+    }
+  }
+
+  &--error {
+    outline-color: $primary !important;
+  }
+}

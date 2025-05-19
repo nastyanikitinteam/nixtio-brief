@@ -1,0 +1,102 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.block-1 {
+  display: flex;
+  flex-direction: column;
+  @include smGap;
+
+  .inputs {
+    display: flex;
+    justify-content: space-between;
+    @include smGap;
+
+    input {
+      max-width: 260px;
+    }
+  }
+
+  .block-2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      @include smGap;
+
+      @include btwTabletAndLaptop {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    > input:last-child {
+      @include btwTabletAndLaptop {
+        margin-top: 12px;
+      }
+
+      @include onLaptop {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+.block-3 {
+  @include lgMarginTop;
+
+  .types {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+
+    @media (min-width: 400px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  input {
+    margin-top: 20px;
+  }
+
+  textarea {
+    @include smMarginTop;
+  }
+}
+
+.block-4 {
+  display: flex;
+  flex-direction: column;
+  @include lgGap;
+  @include lgMarginTop;
+
+  textarea,
+  .options {
+    margin-top: 20px;
+  }
+
+  .options {
+    position: relative;
+    @include options;
+  }
+}
+
+.block-5 {
+  display: flex;
+  flex-direction: column;
+  @include smGap;
+  @include xlMarginTop;
+
+  > :last-child textarea {
+    margin-top: 20px;
+  }
+}
+
+.block-6 {
+  @include xlMarginTop;
+}

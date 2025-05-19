@@ -1,0 +1,25 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.block-1,
+.block-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-1 {
+  position: relative;
+  gap: 20px;
+
+  .options {
+    @include options;
+  }
+
+  p:not(:global(.error-message)) {
+    color: $dark-gray;
+  }
+}
+
+.block-2 {
+  @include lgGap;
+}

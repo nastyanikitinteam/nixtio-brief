@@ -1,0 +1,84 @@
+@import "@/styles/variables.scss";
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .top-block {
+    display: flex;
+    justify-content: space-between;
+
+    h3:last-child {
+      color: $dark-gray;
+    }
+  }
+
+  .rc-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-block: 15px 40px;
+
+    &-rail {
+      background: rgba($gray, 0.5);
+      width: calc(100% + 30px);
+    }
+
+    &-track {
+      background: $black;
+      margin-left: -15px;
+    }
+
+    &-handle {
+      width: 30px;
+      height: 30px;
+      margin-top: 0;
+      background: $black;
+      border: none;
+      box-shadow: none !important;
+      opacity: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 4px;
+        background: $white;
+      }
+    }
+
+    &-rail,
+    &-track,
+    &-handle {
+      border-radius: 0;
+    }
+
+    &-dot {
+      display: none;
+    }
+
+    &-mark {
+      top: 30px;
+
+      &-text {
+        color: $dark-gray;
+        font-size: 15px;
+        line-height: 25px;
+
+        &:first-child {
+          left: -10px !important;
+        }
+
+        &:last-child {
+          transform: translateX(-10%) !important;
+        }
+      }
+    }
+  }
+}
