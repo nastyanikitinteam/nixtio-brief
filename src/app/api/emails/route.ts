@@ -19,10 +19,12 @@ export const POST = async (request: Request) => {
     const pdfBase64 = pdfBuffer.toString("base64");
 
     // hello@nixtio.com
+    console.log(email, 'email')
 
     await resend.emails.send({
       from: "noreply@nixtio.com",
-      to: [email, "lz.ll.zlreserv@gmail.com"],
+      // to: [email, "lz.ll.zlreserv@gmail.com", "kibkaloanastasiya@gmail.com"],
+      to: [email, "kibkaloanastasiya@gmail.com"],
       subject: "Thanks for completing the brief!",
       react: SendPDFForm({ name, isProductForm }),
       attachments: [
