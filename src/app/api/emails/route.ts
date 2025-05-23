@@ -22,8 +22,7 @@ export const POST = async (request: Request) => {
 
     await resend.emails.send({
       from: "noreply@nixtio.com",
-      // to: [email, "lz.ll.zlreserv@gmail.com", "kibkaloanastasiya@gmail.com"],
-      to: [email, "hello.nixtio@gmail.com"],
+      to: [email, "hello@nixtio.com", "kibkaloanastasiya@gmail.com"],
       subject: "Thanks for completing the brief!",
       react: SendPDFForm({ name, isProductForm }),
       attachments: [
