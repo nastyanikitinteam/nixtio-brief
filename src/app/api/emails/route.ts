@@ -21,8 +21,7 @@ export const POST = async (request: Request) => {
     // hello@nixtio.com
 
     await resend.emails.send({
-      // from: "noreply@nixtio.com",
-      from: "developer.nixtio@gmail.com",
+      from: "noreply@nixtio.com",
       // to: [email, "lz.ll.zlreserv@gmail.com", "kibkaloanastasiya@gmail.com"],
       to: [email, "kibkaloanastasiya@gmail.com"],
       subject: "Thanks for completing the brief!",
